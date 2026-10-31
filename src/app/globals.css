@@ -1,34 +1,39 @@
 * { box-sizing: border-box; }
-body { margin: 0; background: #f6f7fb; color: #202438; font-family: Arial, sans-serif; }
-main { max-width: 1120px; margin: auto; padding: 56px 24px; }
-header { margin-bottom: 40px; }
-.tag { color: #6252c5; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
-h1 { margin: 14px 0; font-size: clamp(40px, 8vw, 64px); letter-spacing: -2px; }
-h1 span { color: #7561db; }
-header p, footer, small { color: #626779; line-height: 1.7; }
-h2 { font-size: 20px; margin: 0 0 22px; }
-h3 { margin: 0; font-size: 19px; }
-.board { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 32px; align-items: start; }
-.panel { background: white; border: 1px solid #e4e6ef; border-radius: 18px; padding: 24px; }
-form { display: grid; gap: 10px; }
-label { font-size: 14px; margin-top: 8px; }
-input, textarea { width: 100%; padding: 12px; border: 1px solid #d8dbe7; border-radius: 8px; font: inherit; background: white; color: #202438; }
-textarea { resize: vertical; }
-button { padding: 13px 18px; border: 0; border-radius: 9px; background: #6653c6; color: white; font: inherit; cursor: pointer; }
-form button { margin-top: 10px; }
-button:disabled { opacity: .55; cursor: wait; }
-button:hover:not(:disabled) { background: #5140a9; }
-:focus-visible { outline: 3px solid #a89be9; outline-offset: 3px; }
-.idea { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+body { margin: 0; background: #fdfdfb; color: #24352a; font-family: Arial, sans-serif; font-size: 14px; }
+main { max-width: 1000px; margin: auto; padding: 64px 32px 32px; }
+header { margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid #e2e7e0; }
+.tag { color: #587260; font-size: 10px; font-weight: 600; letter-spacing: 1.6px; }
+h1 { margin: 18px 0 12px; font-family: Georgia, serif; font-size: clamp(34px, 5vw, 48px); font-weight: 400; letter-spacing: -1.5px; }
+h1 span { color: #41694e; }
+header p, footer, small { color: #697469; line-height: 1.7; }
+header p { max-width: 430px; margin-bottom: 0; }
+h2 { font-size: 18px; font-family: Georgia, serif; font-weight: 400; margin: 0 0 22px; }
+h2 small { font-family: Arial, sans-serif; font-size: 12px; }
+h3 { margin: 0; font-size: 16px; font-weight: 500; }
+.board { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; }
+.panel { background: transparent; border: 0; border-radius: 0; padding: 0; }
+form { display: grid; gap: 8px; }
+label { font-size: 12px; margin-top: 10px; color: #566356; }
+input, textarea { width: 100%; padding: 10px 11px; border: 1px solid #d8dfd5; border-radius: 3px; font: inherit; background: #fff; color: #24352a; }
+textarea { resize: vertical; min-height: 110px; }
+button { padding: 11px 16px; border: 1px solid #41694e; border-radius: 3px; background: #41694e; color: white; font: inherit; font-size: 12px; cursor: pointer; }
+form button { margin-top: 12px; justify-self: start; }
+button:disabled { opacity: .5; cursor: default; }
+button:hover:not(:disabled) { background: #31523b; }
+:focus-visible { outline: 2px solid #62846a; outline-offset: 3px; }
+.idea { display: flex; justify-content: space-between; gap: 24px; margin: 0; padding: 22px 0; border-top: 1px solid #e2e7e0; }
 .idea > div { min-width: 0; }
 .idea h3, .description { overflow-wrap: anywhere; }
-.description { white-space: pre-wrap; line-height: 1.7; }
-.vote { align-self: flex-start; min-width: 64px; line-height: 1.6; flex-shrink: 0; }
-.empty { color: #626779; }
-.message { min-height: 24px; line-height: 1.7; color: #5140a9; }
-footer { margin-top: 28px; font-size: 12px; }
-@media (max-width: 760px) {
-  main { padding: 32px 16px; }
-  .board { grid-template-columns: 1fr; gap: 28px; }
-  .panel { padding: 20px; }
+.description { white-space: pre-wrap; line-height: 1.75; color: #566356; margin: 10px 0; }
+.idea small { font-size: 11px; }
+.vote { align-self: flex-start; min-width: 46px; padding: 6px 10px; line-height: 1.7; flex-shrink: 0; background: transparent; color: #41694e; border-color: #d8dfd5; }
+.vote:hover:not(:disabled) { background: #edf2eb; }
+.empty { color: #697469; padding: 22px 0; border-top: 1px solid #e2e7e0; }
+.message { min-height: 24px; line-height: 1.7; color: #41694e; margin-top: 28px; }
+footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid #e2e7e0; font-size: 11px; }
+@media (max-width: 700px) {
+  main { padding: 36px 20px 24px; }
+  header { margin-bottom: 28px; padding-bottom: 24px; }
+  .board { grid-template-columns: 1fr; gap: 36px; }
+  form button { justify-self: stretch; }
 }
